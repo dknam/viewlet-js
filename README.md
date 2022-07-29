@@ -87,6 +87,13 @@ ViewletJS에서 제공하는 주요 기능은 각 `viewlet`에 주입되어 재�
 
 ### ViewletAdoptor
 
+onCreated
+onMount
+onUnmount
+onDispose
+
+
+
 viewletContext
 
 viewletRenderer
