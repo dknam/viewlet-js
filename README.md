@@ -86,7 +86,7 @@ ViewletJS에서 제공하는 주요 기능은 각 `viewlet`에 주입되어 재�
 
 ### Practice
 
-1. ViewletJS 프레임워크의 구조 설계
+1. 플랫폼 독립적인 ViewletJS 프레임워크의 구조 설계
 2. React와 Vue를 이용하여 ReactViewlet, VueViewlet 모듈 개발
 3. ReactViewlet, VueViewlet을 이용한 입력 화면 개발[(viewlet-apps)](https://github.com/dknam/viewlet-apps)
 4. 파일업로드 기능 개발을 통한 관심사의 분리 방법(ui 로직과 비즈니스 로직의 분리, 의존성 주입)
