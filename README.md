@@ -1,5 +1,8 @@
+# ViewletJS
 
-## Prologue
+
+
+### Prologue
 
 수개월에 걸처 React를 기반으로한 UI Framework를 개발 하였다. 
 
@@ -46,8 +49,6 @@ Clean Architecture가 지향하는 계층의 분리와 의존성의 규칙을 �
 <br/>
 <br/>
 
-## ViewletJS
-
 ### viewlet
 
 >(computing) In certain content management systems, a region of a page where customizable content can be rendered.<br/><br/>
@@ -70,7 +71,7 @@ ViewletJS를 통해 다양한 라이브러리로 개발된 각각의 페이지�
  
 ### Goal
 
-ViewletAdotor를 통해 어떠한 형태의 `viewlet`도 등록, 실행할 수 있다.
+ViewletAdoptor를 통해 어떠한 형태의 `viewlet`도 등록, 실행할 수 있다.
 
 각 `viewlet`은 독립적인 랜더링 파이프를 구축 할수 있다(react, vue등)
 
@@ -87,7 +88,25 @@ ViewletJS에서 제공하는 주요 기능은 각 `viewlet`에 주입되어 재�
 ### Practice
 
 1. 플랫폼 독립적인 ViewletJS 프레임워크의 구조 설계
-2. React와 Vue를 이용하여 ReactViewlet, VueViewlet 모듈 개발
-3. ReactViewlet, VueViewlet을 이용한 입력 화면 개발[(viewlet-apps)](https://github.com/dknam/viewlet-apps)
-4. 파일업로드 기능 개발을 통한 관심사의 분리 방법(ui 로직과 비즈니스 로직의 분리, 의존성 주입)
-5. ViewletJS 통합 개발 환경 개발[(Viewlet-Workbench)](https://github.com/dknam/viewlet-workbench)
+
+
+component-loader -> mobile ->
+fetch            ->
+
+component-loader -> web    ->  ViewletPlatform -> ViewletJS
+fetch            ->
+
+
+3. React와 Vue를 이용하여 ReactViewlet, VueViewlet 모듈 개발
+
+ViewletAdoptor -> ReactViewlet <- ReactViewletHandler
+                               <- ReactViewletRenderer
+                               
+ViewletAdoptor -> VueViewlet <- VueViewletHandler
+                             <- VueViewletRenderer
+                               
+
+
+4. ReactViewlet, VueViewlet을 이용한 입력 화면 개발[(viewlet-apps)](https://github.com/dknam/viewlet-apps)
+5. 파일업로드 기능 개발을 통한 관심사의 분리 방법(ui 로직과 비즈니스 로직의 분리, 의존성 주입)
+6. ViewletJS 통합 개발 환경 개발[(Viewlet-Workbench)](https://github.com/dknam/viewlet-workbench)
