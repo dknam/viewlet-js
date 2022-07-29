@@ -70,15 +70,13 @@ ViewletJS를 통해 다양한 라이브러리로 개발된 각각의 페이지�
  
 ### Goal
 
-다양한 UI Rendering library를 동시에 사용할 수 있다.
+ViewletAdotor를 통해 어떠한 형태의 `viewlet`도 등록, 실행할 수 있다.
 
-react 컴포넌트, vue 컴포넌트등 원하는 형태의 `viewlet`를 정의하여 등록할 수 있다.
+각 `viewlet`은 독립적인 랜더링 파이프를 구축 할수 있다(react, vue등)
 
-각 `viewlet`은 ViewletAdoptor를 통해 개별적인 랜더링 라이프 사이클을 정의할 수 있다.
+ViewletJS는 모든 `viewlet`의 생명주기를 제어하며, 자유롭게 `viewlet`을 배치 할수 있다.
 
-각 `viewlet`은 MessageChannel을 통해 데이터를 주고 받을수 있다.
-
-ViewletJS는 모든 `viewlet`의 생명주기를 제어한다.
+ViewletJS에서 제공하는 주요 기능은 각 `viewlet`에 주입되어 재사용 된다.
 
 주요 Business Rule은 각 `viewlet`에 주입되어 재사용 된다.
 
