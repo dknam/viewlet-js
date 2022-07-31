@@ -90,7 +90,7 @@ ViewletJS에서 제공하는 주요 기능은 각 `viewlet`에 주입되어 재�
 
 ### Practice
 
-1. 플랫폼 독립적인 ViewletJS 프레임워크의 구조 설계
+#### 1. 플랫폼 독립적인 ViewletJS 프레임워크의 구조 설계
 
 여기서의 플랫폼은 넓은 의미로 web, mobile, nodejs등의 javascript 런타임 환경을 의마한다.
 
@@ -100,8 +100,22 @@ ViewletJS에서 제공하는 주요 기능은 각 `viewlet`에 주입되어 재�
 
 몇가지 주요 모듈을 설계하면서 각 플랫폼 기반의 주요 모듈을 어떻게 프레임워크에 주입하여 사용하는지에 대해 학습해 본다.
 
+![concept](./docs/images/viewletjs-executable.png)
+
+<br/><br/>
+
+#### 2. View System 설계 및 개발
+
+Reactjs, Vuejs, Iframe으로 개발된 페이지 또는 컴포넌트를 ViewletJS에 랜더링 하기 위한 View System을 설계해 본다.
+
+각 Viewlet을 제아하기 위한 ViewletAdoptor 모듈을 설계한다.
+
+각 Viewlet을 랜더링하고 동작시키기 위한 ViewRenderer 모듈을 개발한다.
+
+각 Viewlet에서 동작할 공동 UI 기능(confirm, alert, openpopup등)을 위한 ViewHandler 모듈을 개발한다.
 
 
+![concept](./docs/images/viewletjs-viewlet.png)
 
 
 
