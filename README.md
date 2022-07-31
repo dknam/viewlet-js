@@ -4,7 +4,7 @@
 
 ### Prologue
 
-수개월에 걸처 React를 기반으로한 UI Framework를 개발 하였다. 
+수개월에 걸처 React library를 사용하여 UI Framework를 개발 하였다. 
 
 다양한 컴포넌트는 Atomic Design Pattern을 기반으로 정교하게 설계되었다.
 
@@ -25,9 +25,11 @@ UI Core 로직과 UI 비즈니스 로직을 완전하게 분리하였다.
 
 react보다 훨씬 빠르고 안정적인 라이브러리가 나온다면 어떻게 될까..
 
-기존 프레임워크를 갈아 엎어야 할까?
+프레임워크를 갈아 엎어야 할까?
 
-react와 함께 사용할 수는 없을까?
+기존 비즈니스 로직들은 프레임워크가 변경돼도 그대로 동작할까?
+
+새로운 라이브러리를 react와 함께 사용할 수는 없을까?
 
 앞으로 계속 더 좋은 라이브러리가 나올텐데 그때는 또 어떻게 해야 할까?
 
@@ -42,23 +44,24 @@ react와 함께 사용할 수는 없을까?
 
 10년 후에도 생명력을 가지는 Framework를 만들려면 어떻게 해야 할까?
 
-무엇이 변하고 무엇이 변하지 않는 것일까?
+대체 무엇이 변하고 무엇이 변하지 않는 것일까?
 
 Clean Architecture가 지향하는 계층의 분리와 의존성의 규칙을 웹 환경에 어떻게 적용할 수 있을까?
 
 <br/>
 <br/>
 
-### viewlet
+### Concept
+
+<ins>`vscode`의 viewlet, slit view등과 같은 Layout System에 영감을 받아 이 프로젝트는 시작되었다.</ins>
+
+#### [viewlet]
 
 >(computing) In certain content management systems, a region of a page where customizable content can be rendered.<br/><br/>
 >(컴퓨팅) 특정 콘텐츠 관리 시스템에서 사용자 지정 가능한 콘텐츠를 렌더링할 수 있는 페이지 영역
 
-
-<br/><br/>
-### Concept
-
-<ins>`vscode`의 viewlet, slit view등과 같은 Layout System에 영감을 받아 이 프로젝트는 시작되었다.</ins>
+<br/>
+<br/>
 
 vscode가 다양한 파일의 확장자를 기반으로 각 파일에 대한 부가 기능들을 독립적으로 싷행하는 것처럼, 
 
@@ -89,12 +92,17 @@ ViewletJS에서 제공하는 주요 기능은 각 `viewlet`에 주입되어 재�
 
 1. 플랫폼 독립적인 ViewletJS 프레임워크의 구조 설계
 
+여기서의 플랫폼은 넓은 의미로 web, mobile, nodejs등의 javascript 런타임 환경을 의마한다.
 
-component-loader -> mobile ->
-fetch            ->
+우리가 개발한 프레임워크가 플랫폼 독립적으로 동작하려면 어떻게 해야 할까?
 
-component-loader -> web    ->  ViewletPlatform -> ViewletJS
-fetch            ->
+각 플랫폼을 초월해서 동작하는 코드를 작성하는 것은 불가능하기 때문에 플랫폼에 종속적인 코드는 외부에서 주입 받아야 한다.
+
+몇가지 주요 모듈을 설계하면서 각 플랫폼 기반의 주요 모듈을 어떻게 프레임워크에 주입하여 사용하는지에 대해 학습해 본다.
+
+
+
+
 
 
 3. React와 Vue를 이용하여 ReactViewlet, VueViewlet 모듈 개발
