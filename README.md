@@ -90,7 +90,7 @@ ViewletJS에서 제공하는 주요 기능은 각 `viewlet`에 주입되어 재�
 
 ### Practice
 
-#### 1. 플랫폼 독립적인 ViewletJS 프레임워크의 구조 설계
+#### 1. 플랫폼 독립직인 프레임워크 개발을 위한 의존성 주입(dependency injection)에 대한 고찰
 
 여기서의 플랫폼은 넓은 의미로 web, mobile, nodejs등의 javascript 런타임 환경을 의마한다.
 
@@ -108,27 +108,28 @@ ViewletJS에서 제공하는 주요 기능은 각 `viewlet`에 주입되어 재�
 
 Reactjs, Vuejs, Iframe으로 개발된 페이지 또는 컴포넌트를 ViewletJS에 랜더링 하기 위한 View System을 설계해 본다.
 
-각 Viewlet을 제아하기 위한 ViewletAdoptor 모듈을 설계한다.
+각 Viewlet의 Lifecycle을 제아하기 위한 ViewletAdoptor 모듈을 설계한다.
 
 각 Viewlet을 랜더링하고 동작시키기 위한 ViewRenderer 모듈을 개발한다.
 
-각 Viewlet에서 동작할 공동 UI 기능(confirm, alert, openpopup등)을 위한 ViewHandler 모듈을 개발한다.
+각 Viewlet에서 주입될 ViewHandler 모듈(공통 UI 기능 - confirm, alert, openpopup등)을 개발한다.
 
 
 ![concept](./docs/images/viewletjs-viewlet.png)
 
 
+<br/><br/>
 
-3. React와 Vue를 이용하여 ReactViewlet, VueViewlet 모듈 개발
+#### 3. FileuploadService 개발을 통한 비즈니스 로직과 UI 로직의 격리 방법
 
-ViewletAdoptor -> ReactViewlet <- ReactViewletHandler
-                               <- ReactViewletRenderer
-                               
-ViewletAdoptor -> VueViewlet <- VueViewletHandler
-                             <- VueViewletRenderer
-                               
+보통 파일업로드 기능은 2가지 영역의 로직이 맞물려 동작한다.
+
+1. 업로드될 파일 목록 표시, 업로드 상태(progress) 표시등의 UI에 표시되는 로직
+2. 해당 유저의 스토리지 권한체크, 남은 스토리지 용량등 비즈니스 룰에 의거한 로직
+
+첫번쨰 로직은 UI(플랫폼, UI 라이브러리)에 종속적이며 언제든지 환경에 의해 변경될수 있다.
+하지만 두번째 비즈니스 로직은 플랫폼(웹이든, 모바일이든)에 독립적으로 실행되고 유지되어야 한다.
+
+Push([Pull versus Push](https://rxjs.dev/guide/observable#pull-versus-push)) 방식을 기반으로 FileuploadService를 설계하면서 어떻게 하면 비즈니스 로직과 UI로직을 완전히 격리시켜 비즈니스 로직의 재사용성을 높일지에 대해 고민해 본다.
 
 
-4. ReactViewlet, VueViewlet을 이용한 입력 화면 개발[(viewlet-apps)](https://github.com/dknam/viewlet-apps)
-5. 파일업로드 기능 개발을 통한 관심사의 분리 방법(ui 로직과 비즈니스 로직의 분리, 의존성 주입)
-6. ViewletJS 통합 개발 환경 개발[(Viewlet-Workbench)](https://github.com/dknam/viewlet-workbench)
