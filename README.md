@@ -1,8 +1,12 @@
-# ViewletJS
 
+<p align="center" width="100%">
+    <img width="60%" src="./docs/images/viewletjs-logo1.png"> 
+</p>
 
+<br/>
+<br/>
 
-### Prologue
+## Prologue
 
 수개월에 걸처 React library를 사용하여 UI Framework를 개발 하였다. 
 
@@ -51,7 +55,7 @@ Clean Architecture가 지향하는 계층의 분리와 의존성의 규칙을 �
 <br/>
 <br/>
 
-### Concept
+## Concept
 
 <ins>`vscode`의 viewlet, slit view등과 같은 Layout System에 영감을 받아 이 프로젝트는 시작되었다.</ins>
 
@@ -72,7 +76,7 @@ ViewletJS를 통해 다양한 라이브러리로 개발된 각각의 페이지�
 
 <br/><br/>
  
-### Goal
+## Goal
 
 ViewletAdoptor를 통해 어떠한 형태의 `viewlet`도 등록, 실행할 수 있다.
 
@@ -88,9 +92,9 @@ ViewletJS에서 제공하는 주요 기능은 각 `viewlet`에 주입되어 재�
 <br/><br/>
 
 
-### Practice
+## Practice
 
-#### 1. 플랫폼 독립직인 프레임워크 개발을 위한 의존성 주입(dependency injection)에 대한 고찰
+### 1. 플랫폼 독립직인 프레임워크 개발을 위한 의존성 주입(dependency injection)에 대한 고찰
 
 여기서의 플랫폼은 넓은 의미로 web, mobile, nodejs등의 javascript 런타임 환경을 의미한다.
 
@@ -104,7 +108,7 @@ ViewletJS에서 제공하는 주요 기능은 각 `viewlet`에 주입되어 재�
 
 <br/><br/>
 
-#### 2. View System 설계 및 개발
+### 2. View System 설계 및 개발
 
 Reactjs, Vuejs, Iframe으로 개발된 페이지 또는 컴포넌트를 ViewletJS에 랜더링 하기 위한 View System을 설계해 본다.
 
@@ -120,7 +124,7 @@ Reactjs, Vuejs, Iframe으로 개발된 페이지 또는 컴포넌트를 ViewletJ
 
 <br/><br/>
 
-#### 3. FileuploadService 개발을 통한 비즈니스 로직과 UI 로직의 격리 방법
+### 3. FileuploadService 개발을 통한 비즈니스 로직과 UI 로직의 격리 방법
 
 보통 파일업로드 기능은 2가지 영역의 로직이 맞물려 동작한다.
 
@@ -135,7 +139,7 @@ Push([Pull versus Push](https://rxjs.dev/guide/observable#pull-versus-push)) 방
 
 <br/><br/>
 
-#### 4. ViewletJS의 개발 및 배포를 위한 개발환경 구성
+### 4. ViewletJS의 개발 및 배포를 위한 개발환경 구성
 
 ViewletJS 프레임워크 개발부터 이를 사용한 비즈니스로직 개발까지의 전체적인 개발 Layer를 구성합니다.
 
