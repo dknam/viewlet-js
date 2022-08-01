@@ -69,9 +69,9 @@ Clean Architecture가 지향하는 계층의 분리와 의존성의 규칙을 �
 <br/>
 <br/>
 
-vscode가 다양한 파일의 확장자를 기반으로 각 파일에 대한 부가 기능들을 독립적으로 실행하는 것처럼, 
+vscode가 파일의 확장자를 기반으로 각 파일의 확장자에 정의된 프로토콜에 따라 독립적인 기능을 실행하는 것 처럼,
 
-ViewletJS를 통해 다양한 라이브러리로 개발된 각각의 페이지를 독립적으로 실행하고자 한다.
+ViewletJS를 통해 다양한 라이브러리로 개발된 여러 페이지를 각각 정의한 파이프라인에 따라 독립적으로 실행하려고 한다.
 
 <p align="center" width="100%">
     <img width="75%" src="./docs/images/viewletjs-concept.png"> 
