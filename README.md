@@ -74,7 +74,7 @@ vscode가 다양한 파일의 확장자를 기반으로 각 파일에 대한 부
 ViewletJS를 통해 다양한 라이브러리로 개발된 각각의 페이지를 독립적으로 실행하고자 한다.
 
 <p align="center" width="100%">
-    <img width="60%" src="./docs/images/viewletjs-concept.png"> 
+    <img width="75%" src="./docs/images/viewletjs-concept.png"> 
 </p>
 
 <br/><br/>
