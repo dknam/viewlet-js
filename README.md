@@ -73,8 +73,9 @@ vscode가 다양한 파일의 확장자를 기반으로 각 파일에 대한 부
 
 ViewletJS를 통해 다양한 라이브러리로 개발된 각각의 페이지를 독립적으로 실행하고자 한다.
 
-![concept](./docs/images/viewletjs-concept.png)
-
+<p align="center" width="100%">
+    <img width="60%" src="./docs/images/viewletjs-concept.png"> 
+</p>
 
 <br/><br/>
  
@@ -106,7 +107,9 @@ ViewletJS에서 제공하는 주요 기능은 각 `viewlet`에 주입되어 재�
 
 몇가지 주요 모듈을 설계하면서 각 플랫폼 기반의 주요 모듈을 어떻게 프레임워크에 주입하여 사용하는지에 대해 학습해 본다.
 
-![concept](./docs/images/viewletjs-executable.png)
+<p align="center" width="100%">
+    <img width="70%" src="./docs/images/viewletjs-executable.png"> 
+</p>
 
 <br/><br/>
 
@@ -120,9 +123,9 @@ Reactjs, Vuejs, Iframe으로 개발된 페이지 또는 컴포넌트를 ViewletJ
 
 각 Viewlet에서 주입될 ViewHandler 모듈(공통 UI 기능 - confirm, alert, openpopup등)을 개발한다.
 
-
-![concept](./docs/images/viewletjs-viewlet.png)
-
+<p align="center" width="100%">
+    <img width="100%" src="./docs/images/viewletjs-viewlet.png"> 
+</p>
 
 <br/><br/>
 
