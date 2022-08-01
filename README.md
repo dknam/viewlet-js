@@ -133,3 +133,26 @@ Reactjs, Vuejs, Iframe으로 개발된 페이지 또는 컴포넌트를 ViewletJ
 Push([Pull versus Push](https://rxjs.dev/guide/observable#pull-versus-push)) 방식을 기반으로 FileuploadService를 설계하면서 어떻게 하면 비즈니스 로직과 UI로직을 완전히 격리시켜 비즈니스 로직의 재사용성을 높일지에 대해 고민해 본다.
 
 
+<br/><br/>
+
+#### 4. ViewletJS의 개발 및 배포를 위한 개발환경 구성
+
+ViewletJS 프레임워크 개발부터 이를 사용한 비즈니스로직 개발까지의 전체적인 개발 Layer를 구성합니다.
+
+|repository|description|
+|------|---|
+|[Viewlet-Apps](https://github.com/dknam/viewlet-apps)|비즈니스 레이어|
+|[Viewlet-Platform](https://github.com/dknam/viewlet-platform)|플랫폼 기반 모듈|
+|[Viewlet-JS](https://github.com/dknam/viewlet-js)|UI 프레임워크|
+|[Viewlet-Workbench](https://github.com/dknam/viewlet-workbench)|빌드, 배포, 설정(lint, tsconfig), 테스트등을 위한 통합 개발 환경|
+
+
+
+rollup을 통한 iife, umd, cjs등의 모듈 번들링 및 배포 과정을 연습합니다.
+
+vscode-extension을 통해 간단한 통합 개발 환경을 구성해 봅니다.
+
+
+
+
+
