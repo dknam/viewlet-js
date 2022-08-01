@@ -2,6 +2,8 @@
 <p align="center" width="100%">
     <img width="60%" src="./docs/images/viewletjs-logo3.png"> 
 </p>
+<p align="center" width="100%">Persistent UI Framework</p>
+
 
 <br/>
 <br/>
