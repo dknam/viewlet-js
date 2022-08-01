@@ -1,6 +1,6 @@
 
 <p align="center" width="100%">
-    <img width="60%" src="./docs/images/viewletjs-logo1.png"> 
+    <img width="60%" src="./docs/images/viewletjs-logo3.png"> 
 </p>
 
 <br/>
