@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/dknam/viewlet-js/issues"
   },
-  "homepage": "https://github.com/dknam/viewlet-js#readme"
+  "homepage": "https://github.com/dknam/viewlet-js#readme",
+  "dependencies": {
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6"
+  }
 }
