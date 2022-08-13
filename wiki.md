@@ -56,7 +56,7 @@ ApplicationContext를 통해 생성된다.
 
 ViewletJS는 SingleView, SplitView, EmbededView, PopupView등을 지원한다.
 
-<p align="center" width="100%">
+<p align="" width="100%">
     <img width="80%" src="https://github.com/dknam/viewlet-js/raw/main/docs/images/viewletjs-viewconcept.png"> 
 </p>
 
