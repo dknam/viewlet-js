@@ -49,6 +49,8 @@ Viewlet 단위의 context이며 주로 Viewlet 단위의 bean container 역할�
 
 ApplicationContext를 통해 생성된다.
 
+<br/>
+<br/>
 
 ## 1.2. 기능 명세
 
@@ -61,10 +63,21 @@ ViewletJS는 SingleView, SplitView, EmbededView, PopupView등을 지원한다.
 </p>
 
 
+<br/>
+<br/>
+
+### 1.2.2 ViewletJS는 기본 UI 기능을 제공한다.
+
+ViewletJS는 기본 UI 기능을 포함하고 있다. ViewletJS의 UI 모듈은 ReactJS로 개발되었으며 각 Viewlet은 ViewletJS-UI-Handler 모듈을 통해 기본적인 UI 기능을 사용 할수 있다.
 
 
+<p align="" width="100%">
+    <img width="80%" src="https://github.com/dknam/viewlet-js/raw/main/docs/images/viewletjs-ui-handler.png"> 
+</p>
 
 
+<br/>
+<br/>
 
 
 
