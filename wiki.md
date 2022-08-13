@@ -68,8 +68,7 @@ ViewletJS는 SingleView, SplitView, EmbededView, PopupView등을 지원한다.
 
 ### 1.2.2 ViewletJS는 기본 UI 기능을 제공한다.
 
-ViewletJS는 기본 UI 기능을 포함하고 있다. ViewletJS의 UI 모듈은 ReactJS로 개발되었으며 각 Viewlet은 ViewletJS-UI-Handler 모듈을 통해 기본적인 UI 기능을 사용 할수 있다.
-
+ViewletJS는 기본 UI 기능을 포함하고 있다. ViewletJS의 UI 모듈은 ReactJS로 개발되었으며 각 Viewlet은 Viewlet-UI-Handler 모듈을 통해 기본적인 UI 기능을 사용 할수 있다.
 
 <p align="" width="100%">
     <img width="80%" src="https://github.com/dknam/viewlet-js/raw/main/docs/images/viewletjs-ui-handler.png"> 
@@ -79,6 +78,19 @@ ViewletJS는 기본 UI 기능을 포함하고 있다. ViewletJS의 UI 모듈은 
 <br/>
 <br/>
 
+### 1.2.3 Viewlet은 독립적인 랜더링 파이프를 가질수 있다.
+
+Viewlet은 IViewletAdoptor 인터페이스를 통해 다양한 형태로 구성할 수 있다.
+
+ReactJS, VueJS, HTML등을 사용해 다양한 방법으로 유저 인터페이스를 개발 할 수 있다.
+
+<p align="" width="100%">
+    <img width="80%" src="https://github.com/dknam/viewlet-js/raw/main/docs/images/viewletjs-iviewletadoptor.png"> 
+</p>
+
+
+<br/>
+<br/>
 
 
 
