@@ -40,7 +40,7 @@ ViewletJS는 vscode 내부적으로 적용된 여러 패턴과 기법들을 학�
 
 2. typescript decorator를 활용한 dependency injection 패턴을 구현해 봅니다.
 
-3. Observer 패턴을 활용해 인접한 계층 간의 communication을 위한 push service를 구현해 봅니다.(disposable, observable)
+3. Observer 패턴을 활용해 인접한 계층 간의 communication을 위한 push service([Pull versus Push](https://rxjs.dev/guide/observable#pull-versus-push))를 구현해 봅니다.(disposable, observable)
 
 <br/>
 <br/>
