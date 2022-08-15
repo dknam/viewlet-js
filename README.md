@@ -56,6 +56,14 @@ ViewletJS는 vscode 내부적으로 적용된 여러 패턴과 기법들을 학�
 3. 통합 개발 환경 구축 - 통합 빌더(rollup, webpack), vscode-extension
 4. TDD 적용 - [selenuim](https://www.selenium.dev), [Testing Library](https://testing-library.com/), [chai](https://www.chaijs.com)를 활용한 테스트 프레임워크 개발해 보기
 
+이 프로젝트는 단순한 기능 구현, 개발 기법등을 다루기 위한 것은 아닙니다. 
+
+개발 환경 구성 부터 어플리케이션 설계, 테스트 환경 구축등 devops를 포함한 개발 전반에 걸친 주제를 조금씩 다뤄볼 예정입니다.
+
+물론 그만큼 주제 하나 하나의 깊이는 부족하겠지만, 그동안 생각지 못했던 영역의 주제를 다뤄 보면서 좀 더 폭 넓은 시야를 가질수 있는 내용으로 구성하려 합니다.
+
+누군가에게는 뻔한 내용일 수 있지만, 어느 누군가에게는 개발자로서 한 단계 더 나아 갈수 있는 큰 자산이 되길 소망합니다.
+
 <br/>
 <br/>
 
