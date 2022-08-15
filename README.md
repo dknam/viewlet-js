@@ -51,7 +51,7 @@ ViewletJS는 vscode 내부적으로 적용된 여러 패턴과 기법들을 학�
 
 그 이후는 아래와 같은 단계로 진행해 갈 예정입니다.
 
-1. ViewletService의 고도화 - atomic design pattern 기반의 MetadataViewlet 개발
+1. Viewlet의 고도화 - atomic design pattern 기반의 ReactReduxViewlet 개발
 2. MonoRepo 환경 구성 - viewlet-workbench / viewlet-js / viewlet-platform / viewlet-apps 레파지토리 구성
 3. 통합 개발 환경 구축 - 통합 빌더(rollup, webpack), vscode-extension
 4. TDD 적용 - [selenuim](https://www.selenium.dev), [Testing Library](https://testing-library.com/), [chai](https://www.chaijs.com)를 활용한 테스트 프레임워크 개발해 보기
