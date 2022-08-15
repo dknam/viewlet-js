@@ -23,7 +23,7 @@ IDE의 code editor는 각 파일의 확장자를 기반으로 서로 다르게 �
 ViewletJS는 다양한 방법(ReactJS, VueJS, html등)으로 개발된 웹 페이지를 통합하여 관리(배치, 랜더링등) 할 수 있는 개발 환경을 제공하려 합니다.
 
 <p align="" width="100%">
-    <img width="35%" src="https://github.com/dknam/viewlet-js/raw/main/docs/images/viewletjs-concept.png"> 
+    <img width="45%" src="https://github.com/dknam/viewlet-js/raw/main/docs/images/viewletjs-concept.png"> 
 </p>
 
 <br/><br/>
