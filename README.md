@@ -28,7 +28,7 @@ ViewletJS는 다양한 방법(ReactJS, VueJS, html등)으로 개발된 웹 페�
 
 <br/><br/>
 
-#### Goal
+#### First Goal
 
 ViewletJS는 vscode 내부적으로 적용된 여러 패턴과 기법들을 학습하여 실제 프로젝트에 적용해 보는 것을 목표로 합니다.
 
