@@ -18,45 +18,45 @@
 
 ### ViewletContainer
 
-ViewletJS에서 제공하는 Main Container이다. 화면에 랜더링 될 영역을 표시한다(viewport)
+ViewletJS에서 제공하는 Main Container이다. 화면에 랜더링 될 영역을 표시합니다(viewport)
 
-ViewletJS는 ViewletContaienr를 통해 Alert, Confirm, Layer등과 같은 기본 UI 기능을 제공한다.
+ViewletJS는 ViewletContaienr를 통해 Alert, Confirm, Layer등과 같은 기본 UI 기능을 제공합니다.
 
-ViewletContainer는 React와 React-Redux로 개발되었다.
+ViewletContainer는 React와 React-Redux로 개발 됩니다.
 
 
 ### Viewlet
 
-독립성을 가진 유저 인터페이스의 최소 단위이다.
+독립성을 가진 유저 인터페이스의 최소 단위입니다.
 
-각 viewlet은 다양한 형태의 라이브러리를 이용하여 개발가능하며, ViewletContainer에 의해 화면에 배치된다.
+각 viewlet은 다양한 형태의 라이브러리를 이용하여 개발 가능하며, ViewletContainer에 의해 화면에 배치됩니다.
 
 ### Viewer
 
-ViewletContainer와 Viewlet을 연결하는 물리적인 인터페이스 역할을 한다.
+ViewletContainer와 Viewlet을 연결하는 물리적인 인터페이스 역할을 합니다.
 
-ViewletContainer는 Viewer를 통해 각 Viewlet을 배치하고, Viewlet은 Viewer를 통해서 랜더링 된다.
+ViewletContainer는 Viewer를 통해 각 Viewlet을 배치하고, Viewlet은 Viewer를 통해서 랜더링 됩니다.
 
-Viewer는 React로 개발된 Component이다.
+Viewer는 React로 개발된 Component입니다.
 
 ### ApplicationContext
 
-ViewletJS의 global context이며, application 단위의 bean container 역할을 한다.
+ViewletJS의 global context이며, application 단위의 bean container 역할을 합니다.
 
 ### ViewletContext
 
-Viewlet 단위의 context이며 주로 Viewlet 단위의 bean container 역할을 한다.
+Viewlet 단위의 context이며 주로 Viewlet 단위의 bean container 역할을 합니다.
 
-ApplicationContext를 통해 생성된다.
+ApplicationContext를 통해 생성 됩니다.
 
 <br/>
 <br/>
 
 ## 1.2. 기능 명세
 
-### 1.2.1 ViewletJS는 여러 Viewlet을 자유롭게 배치할 수 있다.
+### 1.2.1 ViewletJS는 여러 Viewlet을 자유롭게 배치할 수 있습니다.
 
-ViewletJS는 SingleView, SplitView, EmbededView, PopupView등을 지원한다.
+ViewletJS는 SingleView, SplitView, EmbededView, PopupView등을 지원 합니다.
 
 <p align="" width="100%">
     <img width="80%" src="https://github.com/dknam/viewlet-js/raw/main/docs/images/viewletjs-viewconcept.png"> 
@@ -66,9 +66,11 @@ ViewletJS는 SingleView, SplitView, EmbededView, PopupView등을 지원한다.
 <br/>
 <br/>
 
-### 1.2.2 ViewletJS는 기본 UI 기능을 제공한다.
+### 1.2.2 ViewletJS는 기본 UI 기능을 제공 합니다.
 
-ViewletJS는 기본 UI 기능을 포함하고 있다. ViewletJS의 UI 모듈은 ReactJS로 개발되었으며 각 Viewlet은 Viewlet-UI-Handler 모듈을 통해 기본적인 UI 기능을 사용 할수 있다.
+ViewletJS는 기본 UI 기능을 포함하고 있습니다. 
+
+ViewletJS의 UI 모듈은 ReactJS로 개발되었으며 각 Viewlet은 Viewlet-UI-Handler 모듈을 통해 기본적인 UI 기능을 사용 할수 있습니다.
 
 <p align="" width="100%">
     <img width="80%" src="https://github.com/dknam/viewlet-js/raw/main/docs/images/viewletjs-ui-handler.png"> 
@@ -78,14 +80,14 @@ ViewletJS는 기본 UI 기능을 포함하고 있다. ViewletJS의 UI 모듈은 
 <br/>
 <br/>
 
-### 1.2.3 Viewlet은 독립적인 랜더링 파이프를 가질수 있다.
+### 1.2.3 Viewlet은 독립적인 랜더링 파이프를 가질수 있습니다.
 
-Viewlet은 IViewletAdoptor 인터페이스를 통해 다양한 형태로 구성할 수 있다.
+Viewlet은 IViewletAdoptor 인터페이스를 통해 다양한 형태로 구성할 수 있습니다.
 
-ReactJS, VueJS, HTML등을 사용해 다양한 방법으로 유저 인터페이스를 개발 할 수 있다.
+ReactJS, VueJS, HTML등을 사용해 다양한 방법으로 유저 인터페이스를 개발할 수 있습니다.
 
-<p align="" width="100%">
-    <img width="80%" src="https://github.com/dknam/viewlet-js/raw/main/docs/images/viewletjs-iviewletadoptor.png"> 
+<p align="" width="50%">
+    <img width="30%" src="https://github.com/dknam/viewlet-js/raw/main/docs/images/viewletjs-iviewletadoptor.png"> 
 </p>
 
 
@@ -94,7 +96,35 @@ ReactJS, VueJS, HTML등을 사용해 다양한 방법으로 유저 인터페이�
 
 
 
-# 1. ViewletJS 모듈 설계
+# 2. ViewletJS 설계
+
+## 2.1. 역할과 책임
+
+프로그램(로직)을 구현하는 것은 내부와 외부의 경계를 지속적으로 설정해 가는 과정입니다.
+
+배달비를 책정하는 아주 간단한 함수를 하나 예를 들어 보겠습니다.
+
+```ts
+function calcDeliveryFee(distance: number, price: number) {
+    if (price > 30000) {
+        return 0;
+    } else {
+        return distance * 1000;
+    }
+}
+```
+
+위 함수는 구매한 비용이 30,000원 이상이면 배달비는 무료이고, 그 이하면 1km당 1,000원의 배달비를 책정하는 정책을 구현했습니다.
+
+무료배달 가능한 구매비용의 기준과, km당 배달비 금액은 `calcDeliveryFee` 함수 내부에 정의되어 있습니다.
+
+
+아주 간단한 함수를 하나 만들더라도 그 함수 내부 로직과 외부 로직에 대한 경계를 정의해야 합니다. 
+
+
+프레임워크를 개발할 때는 그 내부와 외부에 대한 경계를 설정하는 것이 중요합니다. 
+
+
 
 모듈을 설계할때 중요한 것중 하나는 외부로 노출하는 인터페이스를 정의하는 것입니다. 모듈 외부로 노출되는 인터페스는 해당 모듈의 내부와 외부의 경계를 넘나드는 중요한 요소가 됩니다. 따라서 인터페이스를 정의할 때는 모듈 내부에서 알아서 처리해야 할 것과 외부에 의존하여 처리해야 할 것을 명확하게 구분하며 정의 해야 합니다. <ins>모듈의 내부와 외부의 경계를 구분하는 것은 곧 해당 모듈의 역할과 책임에 대해 정의하는 것과 같습니다.</ins> 책임과 역할에 대해 명확하게 정의된 모듈은 어떤 환경에서도 잘 동작하게 될것 입니다. ViewletJS의 외부 인터페이스를 설계하면서 ViewletJS의 역할과 책임에 대해 정의해 봅시다.
 
