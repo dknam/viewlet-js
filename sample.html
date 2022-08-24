@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Page Title</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style>
+			body {
+				background-color: #292d3e;
+				padding: 0px;
+				margin: 0px;
+			}
+			.top-frame {
+				position: absolute;
+				width: 100%;
+				top: 0px;
+				height: 34px;
+				background-color: rgb(48, 54, 76);
+				border-bottom-color: rgb(48, 54, 76);
+				border-bottom-style: solid;
+				border-bottom-width: 0.989583px;
+				box-sizing: border-box;
+				color: rgb(244 239 237);
+				display: flex;
+				font-weight: 500;
+				font-family: "Segoe WPC", "Segoe UI", "Malgun Gothic", Dotom, sans-serif;
+			}
+			.top-frame > img {
+				width: 22px;
+				height: 22px;
+				margin-top: 6px;
+				margin-left: 6px;
+			}
+			.top-frame > div {
+				margin-left: 6px;
+				line-height: 34px;
+			}
+			.main-frame {
+				position: absolute;
+				top: 35px;
+				width: 100%;
+				bottom: 0px;
+				display: flex;
+			}
+			.toolbar {
+				width: 68px;
+				padding: 10px 5px;
+				height: 100%;
+				background-color: rgb(40, 44, 61);
+				border-bottom-color: rgb(40, 44, 61);
+				border-left-color: rgb(40, 44, 61);
+				border-right-color: rgb(40, 44, 61);
+				border-top-color: rgb(40, 44, 61);
+				box-sizing: border-box;
+				color: rgb(255, 255, 255);
+				text-align: center;
+			}
+			.toolbar > i {
+				padding: 10px 5px;
+			}
+			.explorer {
+				width: 300px;
+				padding: 10px;
+				height: 100%;
+				background-color: rgb(41, 45, 62);
+				border-right-color: rgb(60 60 62);
+				border-right-style: solid;
+				border-right-width: 0.989583px;
+				box-sizing: border-box;
+				color: rgb(108, 115, 154);
+			}
+			.view-container {
+				display: flex;
+				width: 100%;
+				height: 100%;
+			}
+			.view-container .tab {
+				height: 35px;
+				background-color: rgb(49, 54, 74);
+				box-sizing: border-box;
+				color: rgb(255, 255, 255);
+				display: flex;
+			}
+
+			.view-container .tab > div {
+				border-right-color: rgb(39, 43, 59);
+				border-right-style: solid;
+				border-right-width: 0.989583px;
+				box-sizing: border-box;
+				cursor: pointer;
+				display: flex;
+				flex-shrink: 0;
+				font-family: "Segoe WPC", "Segoe UI", "Malgun Gothic", Dotom, sans-serif;
+				font-size: 13px;
+				forced-color-adjust: none;
+				height: 35px;
+				left: 0px;
+				line-height: 35px;
+				min-width: fit-content;
+				padding-left: 10px;
+				position: relative;
+				user-select: none;
+				white-space: nowrap;
+				width: 240.495px;
+				color: rgb(108, 115, 154);
+			}
+			.view-container .tab > div.active {
+				color: rgb(238, 255, 255);
+				background-color: rgb(41, 45, 62);
+			}
+			.view-container .tab > div > span.close {
+				position: absolute;
+				height: 100%;
+				width: 15px;
+				right: 0px;
+			}
+			.view-container .tab > div > span.close::before {
+				content: "X";
+			}
+
+			.split-container {
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top-frame">
+			<img src="./docs/images/favicon/16x16_trans.png" />
+			<div>ViewletJS Demo</div>
+		</div>
+		<div class="main-frame">
+			<div class="toolbar">
+				<i class="fa fa-folder" style="font-size:30px"></i>
+				<i class="fa fa-github" style="font-size:36px"></i>
+			</div>
+			<div class="explorer">
+				<div>Menu</div>
+				<ul>
+					<li>ReactViewlet1</li>
+					<li>ReactViewlet2</li>
+					<li>Veuviewlet1</li>
+					<li>Veuviewlet2</li>
+				</ul>
+			</div>
+			<div class="view-container">
+				<div class="split-container">
+					<div class="tab">
+						<div class="active">
+							<span>react</span>
+							<span class="close"></span>
+						</div>
+						<div>
+							<span>vue</span>
+							<span class="close"></span>
+						</div>
+					</div>
+					<div class="contents">
+						contents
+					</div>
+				</div>
+				<!-- <div class="split-container">
+					<div class="tab">
+						<div class="active">
+							<span>reac2t</span>
+							<span class="close"></span>
+						</div>
+						<div>
+							<span>vue2</span>
+							<span class="close"></span>
+						</div>
+					</div>
+					<div class="contents">
+						contents2
+					</div>
+				</div> -->
+			</div>
+		</div>
+	</body>
+</html>
