@@ -1,4 +1,4 @@
-import { ApplicationContext } from '../../src/context/application_context'
+import { ApplicationContext } from '../../src/context/application_context';
 
 
 let appContext: ApplicationContext = null;

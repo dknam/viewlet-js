@@ -1,8 +1,9 @@
 import "../../src/executable/component_loader";
-import "../../src/components/simple_component";
-import { ViewletContext } from "../../src/context/viewlet_context";
-import { executableRegistry, ExecutableRegistryKey } from "../../src/base/executable";
-import { IComponentLoaderOptions, IComponentLoaderResultData } from "../../src/base/executable/interfaces";
+import "../../../viewlet-application/src/components/simple_component";
+
+import { ViewletContext } from "@viewlet-core";
+import { executableRegistry, ExecutableRegistryKey } from "@viewlet-core";
+import { IComponentLoaderOptions, IComponentLoaderResultData } from "@viewlet-core";
 
 test("executable invoke", async () => {
 	const context = new ViewletContext();

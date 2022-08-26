@@ -4,7 +4,7 @@ import { componentRegistry } from "@viewlet-core";
 import { ViewletContext } from "@viewlet-core";
 
 @executable(ExecutableRegistryKey.IComponentLoader)
-class ComponentLoader extends Executable<IComponentLoaderOptions> {
+export class ComponentLoader extends Executable<IComponentLoaderOptions> {
 	public name = "ComponentLoader";
 
 	constructor(context: ViewletContext, options: any = {}) {

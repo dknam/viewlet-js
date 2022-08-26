@@ -1,0 +1,6 @@
+{
+	"name": "viewlet-application",
+	"scripts": {
+		"build": "tsc"
+	}
+}

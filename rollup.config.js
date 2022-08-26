@@ -1,34 +1,13 @@
 import typescript from 'rollup-plugin-typescript2';
 
-const input = process.env.INPUT_FILE;
-
+const baseConfig = require(`./packages/${process.env.MODULE_NAME}/rollup.config.js`);
 export default [
-	{
-		input: input,
-		output: {
-            // dir: "dist",
-			// sourcemap: true,
-			file: "dist/esm/index.js",
-			format: 'es',
-		},
-		plugins: [
+	...baseConfig.map((config) => {
+		config.plugins = [
 			typescript({
-				tsconfig: "tsconfig.json"
-			})
-		],
-	},
-    {
-		input: input,
-		output: {
-            // dir: "dist",
-			// sourcemap: true,
-			file: "dist/cjs/index.js",
-			format: 'cjs',
-		},
-		plugins: [
-			typescript({
-				tsconfig: "tsconfig.json"
-			})
-		],
-	}
-]
+				tsconfig: "tsconfig.json",
+			}),
+		];
+        return config;
+	}),
+];

@@ -1,9 +1,9 @@
 {
-	"name": "@dknam/viewlet-core",
+	"name": "viewlet-core",
 	"main": "dist/esm/index.js",
 	"module": "dist/esm/index.js",
 	"types": "dist/esm/index.d.ts",
 	"scripts": {
-		"build": "NODE_ENV=production INPUT_FILE=./src/index.ts rollup -c ../../rollup.config.js"
+		"build": "NODE_ENV=production MODULE_NAME=viewlet-core rollup -c ../../rollup.config.js"
 	}
 }

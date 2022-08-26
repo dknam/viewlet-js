@@ -15,9 +15,8 @@
 		"sourceMap": true /* Generates corresponding '.map' file. */,
     "baseUrl": "./packages",
 		"paths": {
-      "@viewlet-core": ["viewlet-core"],
-      "@viewlet-platform": ["viewlet-platform"]
-    },		
+      "@viewlet-core": ["viewlet-core/dist/esm"]
+    },
 		// "composite": true,                       /* Enable project compilation */
 		// "tsBuildInfoFile": "./",                 /* Specify file to store incremental compilation information */
 		// "removeComments": true,                  /* Do not emit comments to output. */
@@ -71,6 +70,7 @@
 		"*.config.js", // config파일들을 type생성 대상에서 제외
 		"packages/**/node_modules/*.d.ts",
 		"node_modules/*.d.ts",
-		"**/dist/**/*"
+		"**/dist/**/*",
+    "**/__tests__/**/*"
 	]
 }
