@@ -1,7 +1,7 @@
-import { Executable, executable, ExecutableRegistryKey, IExecutableResolver } from "../base/executable";
-import { IComponentLoaderOptions, IComponentLoaderResultData } from "../base/executable/interfaces";
-import { componentRegistry } from "../components/registry";
-import { ViewletContext } from "../context/viewlet_context";
+import { Executable, executable, ExecutableRegistryKey, IExecutableResolver } from "@viewlet-core";
+import { IComponentLoaderOptions, IComponentLoaderResultData } from "@viewlet-core";
+import { componentRegistry } from "@viewlet-core";
+import { ViewletContext } from "@viewlet-core";
 
 @executable(ExecutableRegistryKey.IComponentLoader)
 class ComponentLoader extends Executable<IComponentLoaderOptions> {

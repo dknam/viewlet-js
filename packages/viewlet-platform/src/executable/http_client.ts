@@ -1,5 +1,5 @@
-import { Executable, executable, ExecutableRegistryKey, IExecutableResolver } from "../base/executable";
-import { IHttpClientOptions, IHttpClientResultData } from "../base/executable/interfaces";
+import { Executable, executable, ExecutableRegistryKey, IExecutableResolver } from "@viewlet-core";
+import { IHttpClientOptions, IHttpClientResultData } from "@viewlet-core";
 
 @executable(ExecutableRegistryKey.IHttpClient)
 class HttpClient extends Executable<IHttpClientOptions> {
