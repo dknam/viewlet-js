@@ -1,13 +1,24 @@
 /**
  * Original Code
- * https://github.com/dknam/vscode/blob/master/src/vs/base/common/lifecycle.ts
+ * https://github.com/microsoft/vscode/blob/main/src/vs/base/common/lifecycle.ts
  */
 
-import { IDisposable } from "./disposable";
+export interface IDisposable {
+	dispose(): void;
+}
 
 export class DisposableStore implements IDisposable {
-	public _toDispose = new Set<IDisposable>();
+	private _toDispose = new Set<IDisposable>();
 	private _isDisposed = false;
+
+	constructor() {	}
+
+	/**
+	 * Returns `true` if this object has been disposed
+	 */
+	public get isDisposed(): boolean {
+		return this._isDisposed;
+	}
 
 	/**
 	 * Dispose of all registered disposables and mark this object as disposed.
@@ -32,43 +43,36 @@ export class DisposableStore implements IDisposable {
 		this._toDispose.clear();
 	}
 
-	public reset(): void {
-		this._toDispose.forEach(item => item.reset?.());
-		// this._toDispose.clear();
-	}
-
-	public add<T extends IDisposable>(t: T): T {
-		if (!t) {
-			return t;
+	public add<T extends IDisposable>(o: T): T {
+		if (!o) {
+			return o;
 		}
 
 		if (this._isDisposed) {
 			console.warn(new Error('Trying to add a disposable to a DisposableStore that has already been disposed of. The added object will be leaked!').stack);
 		} else {
-			this._toDispose.add(t);
+			this._toDispose.add(o);
 		}
 
-		return t;
+		return o;
+	}
+}
+
+export class Disposable implements IDisposable {
+
+	protected readonly _store = new DisposableStore();
+
+	constructor() {
 	}
 
-	public remove(filter: Function): void {
-		this._toDispose.forEach(item => {
-			if(filter(item)) {
-				item.dispose();
-				this._toDispose.delete(item);
-			}
-		});
+	public dispose(): void {
+		this._store.dispose();
 	}
 
-	public get(filter: Function): IDisposable {
-		let _item: IDisposable;
-		this._toDispose.forEach(item => {
-			if(filter(item)){
-				_item = item;
-				return false;
-			}
-		});
-		return _item;
+	public register<T extends IDisposable>(t: T): T {
+		if ((t as any as Disposable) === this) {
+			throw new Error('Cannot register a disposable on itself!');
+		}
+		return this._store.add(t);
 	}
-
 }

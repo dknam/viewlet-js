@@ -1,6 +1,6 @@
 /**
  * Original Code
- * https://github.com/dknam/vscode/blob/master/src/vs/platform/registry/common/platform.ts
+ * https://github.com/microsoft/vscode/blob/main/src/vs/platform/registry/common/platform.ts
  */
 
 export interface IRegistry {
