@@ -22,6 +22,10 @@ export class ApplicationContext extends Disposable {
         return context;
     }
 
+    getViewletContext(uuid: string) {
+        return this.contexts.find(_ => _.uuid == uuid);
+    }
+
     getAllViewletContext() {
         return this.contexts;
     }

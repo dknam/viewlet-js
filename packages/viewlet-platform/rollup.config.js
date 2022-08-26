@@ -16,6 +16,9 @@ module.exports = [
 			format: "umd",
 			globals: {
 				"react": "React",
+				"react-dom": "ReactDOM",
+				"react-redux": "ReactRedux",
+				"redux": "Redux",
 				"@viewlet-core": "ViewletCore"
 			}
 		}

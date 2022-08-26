@@ -124,12 +124,16 @@
 				width: 100%;
 			}
 		</style>
-		<script src="./packages/viewlet-core/dist/umd/index.js"></script>
-		<script src="./packages/viewlet-platform/dist/umd/browser/index.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.0/redux.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react-redux/8.0.2/react-redux.min.js"></script>
+        <script src="/packages/viewlet-core/dist/umd/index.js"></script>
+		<script src="/packages/viewlet-platform/dist/umd/index.js"></script>
 	</head>
 	<body>
 		<div class="top-frame">
-			<img src="./docs/images/favicon/16x16_trans.png" />
+			<img src="/static/images/favicon/16x16_trans.png" />
 			<div>ViewletJS Demo</div>
 		</div>
 		<div class="main-frame">
@@ -179,5 +183,6 @@
 				</div> -->
 			</div>
 		</div>
+		<script src="/packages/viewlet-application/dist/entry.js"></script>
 	</body>
 </html>

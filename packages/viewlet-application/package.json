@@ -1,6 +1,6 @@
 {
 	"name": "viewlet-application",
 	"scripts": {
-		"build": "tsc"
+		"build": "tsc && NODE_ENV=production MODULE_NAME=viewlet-application rollup -c ../../rollup.config.js"
 	}
 }

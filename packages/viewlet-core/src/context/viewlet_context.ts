@@ -1,8 +1,13 @@
 import { Disposable, IDisposable } from "../base/disposable";
 import { Executable, ExecutableResolverHandler, IExecutable, TExecutableResult } from "../base/executable";
 import { Observable } from "../base/observable";
+import { IViewletOptions, Viewlet, viewletRegistry, VIEWLET_TYPE } from "../viewlet";
 
 export interface IViewletContextDestroyEvent {
+	uuid: string;
+}
+
+export interface IViewletContextLoadEvent {
 	uuid: string;
 }
 
@@ -13,6 +18,9 @@ export class ViewletContext extends Disposable {
 
 	private _onDestroy = this.register(new Observable<IViewletContextDestroyEvent>());
 	public onDestroy = this._onDestroy.subscribe;
+
+	private _onLoaded = this.register(new Observable<IViewletContextLoadEvent>());
+	public onLoaded = this._onLoaded.subscribe;
 
 	constructor(public uuid: string = Date.now().toString()) {
 		super();
@@ -29,6 +37,18 @@ export class ViewletContext extends Disposable {
 			const handler = new ExecutableResolverHandler(ins, { resolve, reject });
 			ins.execute(handler);
 		});
+	}
+
+	public getViewlet(type: VIEWLET_TYPE, viewletOptions: IViewletOptions): Viewlet {
+		const target = viewletRegistry.get(type);
+		return new target.viewlet(this, new target.viewHandler(), viewletOptions);
+	}
+
+	public async mountViewlet(viewlet: Viewlet) {
+		await viewlet.mount();
+		this._onLoaded.notify({
+			uuid: this.uuid
+		})
 	}
 
 	public dispose(): void {

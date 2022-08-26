@@ -4,9 +4,14 @@ import { vcomponent } from "@viewlet-core";
 import * as React from 'react';
 
 @vcomponent()
-class SimpleComponent extends React.Component {
+class SimpleComponent extends React.Component<{onDidMount: any}> {
 
     render() {
         return <div>simple</div>
     }
+
+    componentDidMount(): void {
+        this.props.onDidMount();
+    }
+
 }
