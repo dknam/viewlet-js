@@ -1,0 +1,14 @@
+{
+	"name": "viewlet-platform",
+	"main": "dist/esm/index.js",
+	"module": "dist/esm/index.js",
+	"types": "dist/esm/index.d.ts",
+	"scripts": {
+		"build": "NODE_ENV=production MODULE_NAME=viewlet-platform rollup -c ../../rollup.config.js"
+	},
+	"devDependencies": {
+		"@types/react": "^18.0.17",
+		"@types/react-redux": "^7.1.24",
+		"@types/redux": "^3.6.0"
+	}
+}

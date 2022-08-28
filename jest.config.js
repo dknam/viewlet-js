@@ -1,19 +1,29 @@
 const path = require('path');
 
 module.exports = {
-	transform: {
-		"^.+\\.ts$": "ts-jest",
-		"^.+\\.tsx$": "ts-jest",
-	},
-	// moduleNameMapper: {
-	// 	"react": path.resolve(__dirname, "node_modules/react"),
-	// },
-	// moduleDirectories: ['node_modules', '<rootDir>/src'],
-	rootDir: "__tests__",
-	moduleFileExtensions: ["ts", "tsx", "js", "json"],
-	//   globalSetup: '<rootDir>/global.setup.js',
-	// testPathIgnorePatterns: ["/node_modules/(?!(react)/)"],
-	// setupFiles: ["<rootDir>/global.setup.js"],
-	testRegex: "(/<rootDir>/.*|\\.spec)\\.(ts|tsx|js)$",
-	testEnvironment: "jsdom"
+  	projects: [
+		{
+			transform: {
+				"^.+\\.ts$": "ts-jest",
+				"^.+\\.tsx$": "ts-jest",
+			},
+			// rootDir: "packages/viewlet-core/__tests__",
+			moduleFileExtensions: ["ts", "tsx", "js", "json"],
+			testRegex: "(/<rootDir>/packages/viewlet-core/.*|\\.spec)\\.(ts|tsx|js)$",
+			testEnvironment: "jsdom"
+		},
+		{
+			transform: {
+				"^.+\\.ts$": "ts-jest",
+				"^.+\\.tsx$": "ts-jest",
+			},
+			moduleNameMapper: {
+				"^@viewlet-core/(.*)$": "<rootDir>/packages/viewlet-core/src/*",
+			},
+			// rootDir: "packages/viewlet-platform/__tests__",
+			moduleFileExtensions: ["ts", "tsx", "js", "json"],
+			testRegex: "(/<rootDir>/packages/viewlet-platform/.*|\\.spec)\\.(ts|tsx|js)$",
+			testEnvironment: "jsdom"
+		}
+	],
 };
