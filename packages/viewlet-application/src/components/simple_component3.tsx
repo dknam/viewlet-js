@@ -1,10 +1,12 @@
-import { vcomponent } from "@viewlet-core";
+import { IViewHandler, vcomponent } from "@viewlet-core";
 // import React from "react";
 //ts-jest에서 import하지 못해 아래와 같이 변경
 import * as React from 'react';
 
+
+
 @vcomponent()
-class SimpleComponent extends React.Component<any, any> {
+class SimpleComponent3 extends React.Component<any, any> {
 
     click = async () => {
         const status = await this.props.viewHandler.confirm("?");
@@ -15,10 +17,8 @@ class SimpleComponent extends React.Component<any, any> {
         }
     }
 
-    render(@fileuploadService: IFileuploader) {
-
-        fi
-        return <div onClick={this.click}>open confirm</div>
+    render() {
+        return <div onClick={this.click}>simple333</div>
     }
 
     componentDidMount(): void {

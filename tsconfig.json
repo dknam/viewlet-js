@@ -13,10 +13,10 @@
 		"declaration": true /* Generates corresponding '.d.ts' file. */,
 		// "declarationMap": true,                  /* Generates a sourcemap for each corresponding '.d.ts' file. */
 		"sourceMap": true /* Generates corresponding '.map' file. */,
-    "baseUrl": "./packages",
+		"baseUrl": "./packages",
 		"paths": {
-      "@viewlet-core": ["viewlet-core/dist/esm"]
-    },
+			"@viewlet-core": ["viewlet-core"]
+		},
 		// "composite": true,                       /* Enable project compilation */
 		// "tsBuildInfoFile": "./",                 /* Specify file to store incremental compilation information */
 		// "removeComments": true,                  /* Do not emit comments to output. */
@@ -71,6 +71,6 @@
 		"packages/**/node_modules/*.d.ts",
 		"node_modules/*.d.ts",
 		"**/dist/**/*",
-    "**/__tests__/**/*"
+		"**/__tests__/**/*"
 	]
 }

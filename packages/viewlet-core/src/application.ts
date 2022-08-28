@@ -31,7 +31,8 @@ export class ViewletApp {
 
     async route(options: IRouteOptions) {
         return new Promise((resolve) => {
-            const context = this.appContext.createViewletContext();
+            const store = this.options.provider.store;
+            const context = this.appContext.createViewletContext(store, Date.now().toString());
             context.onLoaded(resolve);
             
             this.options.provider.store.dispatch({

@@ -1,3 +1,4 @@
+import { GET_APPLICATION_CONTEXT } from "../base";
 import { Disposable, IDisposable } from "../base/disposable";
 import { Executable, ExecutableResolverHandler, IExecutable, TExecutableResult } from "../base/executable";
 import { Observable } from "../base/observable";
@@ -22,7 +23,7 @@ export class ViewletContext extends Disposable {
 	private _onLoaded = this.register(new Observable<IViewletContextLoadEvent>());
 	public onLoaded = this._onLoaded.subscribe;
 
-	constructor(public uuid: string = Date.now().toString()) {
+	constructor(public uuid: string = Date.now().toString(), public viewRenderer: any) {
 		super();
 	}
 
@@ -41,7 +42,7 @@ export class ViewletContext extends Disposable {
 
 	public getViewlet(type: VIEWLET_TYPE, viewletOptions: IViewletOptions): Viewlet {
 		const target = viewletRegistry.get(type);
-		return new target.viewlet(this, new target.viewHandler(), viewletOptions);
+		return new target.viewlet(this, new target.viewHandler(this, this.viewRenderer), viewletOptions);
 	}
 
 	public async mountViewlet(viewlet: Viewlet) {

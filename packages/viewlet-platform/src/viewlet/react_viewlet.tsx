@@ -32,6 +32,7 @@ export class ReactViewlet extends Viewlet {
             ReactDOM.render(
                 <Component
                     context={this.context}
+                    viewHandler={this.viewHandler}
                     // viewHandler={this.context.getViewHandler()}
                     // contextID={this.context.contextID}
                     onDidMount={resolve}

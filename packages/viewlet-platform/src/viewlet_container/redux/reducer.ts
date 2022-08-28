@@ -21,7 +21,15 @@ export const reducer = function (state = initState, action: any) {
             return Object.assign({}, state, {
                 viewers: []
             });            
-
+        case "ADD_CONFIRM":
+            return Object.assign({}, state, {
+                confirms: [
+                    ...state.confirms,
+                    {
+                        ...action.confirm
+                    }
+                ]
+            });
         default:
             return state;
     }

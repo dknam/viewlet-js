@@ -11,8 +11,8 @@ export class ApplicationContext extends Disposable {
     private _onDestroyViewletContext = this.register(new Observable<IViewletContextDestroyEvent>())
     public onDestroyViewletContext = this._onDestroyViewletContext.subscribe;
 
-    createViewletContext(uuid?: string): ViewletContext {
-        const context = new ViewletContext(uuid);
+    createViewletContext(viewRenderer: any, uuid?: string): ViewletContext {
+        const context = new ViewletContext(uuid, viewRenderer);
         context.onDestroy((e) => {
             this.unregister(e.uuid);
         })
@@ -36,6 +36,11 @@ export class ApplicationContext extends Disposable {
             this.contexts.splice(index, 1)
             this._onDestroyViewletContext.notify({ uuid: uuid });
         }
+    }
+
+    publishEvent(event) {
+        const sub = this.subscribers.find(_ => _.key == event.key)
+        sub.relove(event.result);
     }
 
     destroy() {

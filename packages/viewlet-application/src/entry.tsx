@@ -11,21 +11,7 @@ declare const ReactDOM: any;
     });
     
     app.startUp();
-    await app.route({
-        viewletOptions: {
-            type: "react",
-            name: "SimpleComponent",
-            url: "/packages/viewlet-application/dist/simple_component.js"
-        }
-    });
-
-    await app.route({
-        viewletOptions: {
-            type: "react",
-            name: "SimpleComponent",
-            url: "/packages/viewlet-application/dist/simple_component.js"
-        }
-    });
+    
     await app.route({
         viewletOptions: {
             type: "react",
