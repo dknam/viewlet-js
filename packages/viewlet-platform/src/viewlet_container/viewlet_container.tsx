@@ -1,4 +1,4 @@
-import { GET_APPLICATION_CONTEXT, IViewletOptions } from "@viewlet-core";
+import { IViewletOptions } from "@viewlet-core";
 import React from "react";
 import { connect, Provider } from "react-redux";
 import { Viewer } from "./viewer";
@@ -39,10 +39,7 @@ class Container extends React.Component<IUIContainerProps, IUIContainerState> {
 	}
 
 	resolveConfirm(status: any, uuid:string) {
-		GET_APPLICATION_CONTEXT().publishEvent({
-			key: `confirm-${uuid}`,
-			result: status
-		})
+		
 	}
 	
 	renderConfirm = () => {

@@ -15,9 +15,7 @@ class SimpleComponent extends React.Component<any, any> {
         }
     }
 
-    render(@fileuploadService: IFileuploader) {
-
-        fi
+    render() {
         return <div onClick={this.click}>open confirm</div>
     }
 

@@ -38,11 +38,6 @@ export class ApplicationContext extends Disposable {
         }
     }
 
-    publishEvent(event) {
-        const sub = this.subscribers.find(_ => _.key == event.key)
-        sub.relove(event.result);
-    }
-
     destroy() {
         this.contexts.slice().forEach(c => c.dispose());
         this.contexts = null;

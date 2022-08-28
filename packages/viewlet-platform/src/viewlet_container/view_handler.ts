@@ -2,7 +2,7 @@ import { IViewHandler, ViewletContext } from "@viewlet-core";
 
 export class ViewHandler implements IViewHandler {
 
-    constructor(private context: ViewletContext, @ViewHalder private viewRenderer: any) {}
+    constructor(private context: ViewletContext, private viewRenderer: any) {}
 
     async alert(message: string): Promise<void> {
         this.viewRenderer.dispatch({
@@ -19,20 +19,13 @@ export class ViewHandler implements IViewHandler {
                     message
                 }
             });
+
             this.context.onDestroy(() => {
                 this.viewRenderer.dispatch({
                     type: "REMOVE_CONFIRM"
                 })
             })
 
-            this.context.subcribe({
-                key: `confirm-${this.context.uuid}`,
-                resolve: (result: any) => {
-                    resolve(result);
-                }
-            })
-
         })
-        
     }
 }
